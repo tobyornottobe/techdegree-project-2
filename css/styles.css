@@ -1,0 +1,306 @@
+/* Global Layout Set-up */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: 'Nunito', sans-serif;
+  color: #222;
+  background: lightgrey;
+}
+/* Link Styles */
+
+a {
+  text-decoration: none;
+  color: #999;
+}
+a:hover {
+  color: #6633ff;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* Navigation */
+
+.main-header,
+.nav {
+	display: flex;
+	flex-direction: column;
+}
+
+.main-header {
+  padding-top: 2em;
+}
+
+.name {
+  font-family: 'Bungee', cursive;
+  color: darkred;
+  align-self: center;
+}
+
+.nav {
+  list-style-type: none;
+  margin-top: 1.5em;
+  padding: 0;
+}
+
+.nav a {
+  display: block;
+  color: darkgrey;
+  font-size: 1.125em;
+  text-align: center;
+  margin: 4px;
+  padding: .4em;
+  background-color: white;
+  transition: all .5s;
+}
+.nav a:hover {
+  color: black;
+}
+
+/* Profile */
+
+
+.intro-container {
+  width: 90%;
+  margin-top: 1em;
+  margin-bottom: 2em;
+}
+
+.portfolio-image {
+  width: 70%;
+
+}
+
+/* Portfolio */
+
+.flex {
+  width: 100%;
+  background-color:#ffffff;
+  padding-bottom: 2em;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 1em;
+  margin-top: 1em;
+}
+
+.flex h2 {
+  width: 100%;
+}
+
+.card {
+  margin-bottom: 2em;
+  padding: 20px 40px 40px;
+}
+
+.card img {
+  max-width: 100%;
+}
+
+.card:hover {
+  border-color: #2191FB;
+}
+
+/* Footer */
+
+#contact-section {
+  padding: 1em;
+}
+
+.footer-nav-large {
+  display: none;
+}
+
+.footer-nav-small li:first-child {
+  margin-right: 20%;
+}
+.footer-nav-small li:last-child {
+  margin-left: 20%;
+}
+
+footer {
+  min-height: 30px;
+  padding: 20px 0 40px 20px;
+}
+
+
+footer ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+footer ul li {
+  display: inline-block;
+}
+
+/* Clearfix */
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+
+
+/* Tablet */
+@media screen and (min-width: 768px) {
+
+
+.main-header {
+    width: 90%;
+    margin: 0 auto;
+    list-style-type: none;
+  }
+
+  .name {
+    align-self: center;
+  }
+
+  .nav {
+    margin-top: 2em;
+    margin-left: 10em;
+    margin-right: 10em;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .nav  a {
+    background-color: transparent;
+  }
+
+  .intro-container {
+    width: 100%;
+    max-width: 1150px;
+  }
+
+  .intro {
+    width: 50%;
+    float: left;
+    text-align: left;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .profile-image {
+    width: 40%;
+    float: right;
+    padding-right: 2em;
+}
+
+
+  .flex {
+      width: 90%;
+      max-width: 1150px;
+      margin: 0 auto;
+      background-color: yellow;
+  }
+
+  .card {
+    flex: 1;
+    min-width: 40vw;
+    margin-left: 5px;
+    margin-right: 5px;
+    justify-content: space-around;
+  }
+
+  main {
+    padding-top: 20px;
+  }
+
+  main p {
+    line-height: 1.6em;
+  }
+
+  footer {
+    font-size: 1.3em;
+    max-width: 1200px;
+    margin: 40px auto;
+  }
+
+  #contact-section {
+    width: 70%;
+    padding: 1em;
+  }
+
+  .footer-nav-large {
+    display: inline-flex;
+  }
+  .footer-nav-large li {
+    margin-right: 2em;
+  }
+
+  .footer-nav-large .name {
+    float: left;
+    margin-right: 14em;
+  }
+  .footer-nav-small {
+    display: none;
+  }
+
+}
+
+/* Styles for larger screens */
+@media screen and (min-width: 1024px) {
+
+
+.main-header {
+    width: 85%;
+    max-width: 1150px;
+}
+
+  .name {
+    width: 60%;
+    text-align: left;
+    float: left;
+    padding-left: 1.2em;
+}
+
+  .nav {
+    width: 40%;
+    margin: auto;
+    display: flex;
+    align-self: center;
+    float: right;
+  }
+
+  .nav li {
+    margin-top: 1em;
+    margin-left: .65em;
+    margin-right: .65em;
+  }
+
+  .intro {
+    width: 50%;
+    font-size: 1.5em;
+    float: left;
+    padding-right: 2em;
+  }
+
+  .profile-image {
+    width: 50%;
+    float: right;
+    padding-right: 1em;
+  }
+
+  .flex {
+        background-color: lightblue;
+        justify-content: space-around;
+  }
+
+  .card {
+    flex-basis: 28%;
+    min-width: 200px;
+  }
+  .card img {
+    max-width: 300px;
+  }
+
+}
